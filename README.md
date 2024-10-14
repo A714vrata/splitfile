@@ -9,13 +9,13 @@ It splits large text files into smaller files of 5000 characters each.
 Compile the program.
 
 ```
-$ gcc split_file.c -o splitfile
+gcc split_file.c -o splitfile
 ```
 
 Run the binary
 
 ```
-$ ./splitfile
+./splitfile
 ```
 
 Currently the program has to be run in the same directory as the file you want to split.
