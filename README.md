@@ -6,6 +6,18 @@ It splits large text files into smaller files of 5000 characters each.
 
 ## Usage
 
+Compile the program.
+
+```
+$ gcc split_file.c -o splitfile
+```
+
+Run the binary
+
+```
+$ ./splitfile
+```
+
 Currently the program has to be run in the same directory as the file you want to split.
 
 Simply provide the name of the text file you want to split when prompted to do so.
