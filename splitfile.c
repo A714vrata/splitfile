@@ -25,6 +25,7 @@ int main() {
   if (readpoint == NULL) {
     fprintf(stderr, "Failed to open file %s\nExiting\n", filename);
     free(txbuf);
+    txbuf = NULL;
     return EXIT_FAILURE;
   }
 
@@ -54,6 +55,7 @@ int main() {
   }
   fclose(readpoint);
   free(txbuf);
+  txbuf = NULL;
 
   return EXIT_SUCCESS;
 }
