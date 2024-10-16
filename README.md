@@ -9,7 +9,7 @@ It splits large text files into smaller files of 5000 characters each.
 Compile the program.
 
 ```
-gcc split_file.c -o splitfile
+gcc splitfile.c -o splitfile
 ```
 
 Run the binary
