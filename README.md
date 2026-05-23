@@ -28,8 +28,9 @@ sudo make uninstall
 
 ### Run the binary
 ```
-./splitfile
+splitfile
 ```
+> Note: you may need to restart your terminal after the install to update your configs or use the `source` command.
 
 Currently the program has to be run in the same directory as the file you want to split.
 
