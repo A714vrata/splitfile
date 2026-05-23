@@ -11,20 +11,22 @@ It splits large text files into smaller files of 5000 characters each.
 
 ## Usage
 
-Install the program.
+> Note: you will need to use sudo to make install/uninstall as the program is being installed to /usr/local/bin to avoid breaking user space.
+
+### Install the program.
 
 ```
 sudo make install
 ```
 
 
-Uninstall the program.
+### Uninstall the program.
 
 ```
 sudo make uninstall
 ```
 
-Run the binary
+### Run the binary
 ```
 ./splitfile
 ```
