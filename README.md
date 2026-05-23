@@ -7,20 +7,26 @@ It splits large text files into smaller files of 5000 characters each.
 ## Prerequisites
 
 - clang: for clang compilations
+- make: frontend to handle compilation/install process
 
 ## Usage
 
-- Install the program.
+Install the program.
 
 ```
 sudo make install
 ```
 
 
-- Uninstall the program.
+Uninstall the program.
 
 ```
 sudo make uninstall
+```
+
+Run the binary
+```
+./splitfile
 ```
 
 Currently the program has to be run in the same directory as the file you want to split.
