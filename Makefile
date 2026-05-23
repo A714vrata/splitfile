@@ -1,18 +1,18 @@
 SRCDIR = src
-BUILDDIR = biuld
+BUILDDIR = build
 ENTRY = splitfile.c
-PACKAGENAME = sf
+PACKAGENAME = splitfile
 CC := $(shell command -v clang 2> /dev/null || \
 	  command -v gcc 2> /dev/null || \
       echo cc)
 
 .DEFAULT_GOAL = build
-.PHONY = build install unsintall
+.PHONY = build install uninstall
 
 build:
 	@mkdir -p $(BUILDDIR)
 	$(CC) -o $(BUILDDIR)/$(PACKAGENAME) $(SRCDIR)/$(ENTRY)
-	@echo "Installed sf package to /usr/loca/bin/sf"
+	@echo "Installed splitfile package to /usr/loca/bin/splitfile"
 
 
 install: build
@@ -21,4 +21,4 @@ install: build
 
 
 uninstall:
-	@if [ -f /usr/local/bin/$(PACKAGENAME) ]; then rm /usr/local/bin/$(PACKAGENAME) && echo "Uninstalled package"; else echo "Nothing to unsintall"; fi
+	@if [ -f /usr/local/bin/$(PACKAGENAME) ]; then rm /usr/local/bin/$(PACKAGENAME) && echo "Uninstalled package"; else echo "Nothing to uninstall"; fi
