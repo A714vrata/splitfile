@@ -4,18 +4,23 @@ Splitfile is a terminal utility that I created for personal use.
 
 It splits large text files into smaller files of 5000 characters each.
 
+## Prerequisites
+
+- clang: for clang compilations
+
 ## Usage
 
-Compile the program.
+- Install the program.
 
 ```
-gcc src/splitfile.c -o splitfile
+sudo make install
 ```
 
-Run the binary
+
+- Uninstall the program.
 
 ```
-./splitfile
+sudo make uninstall
 ```
 
 Currently the program has to be run in the same directory as the file you want to split.
