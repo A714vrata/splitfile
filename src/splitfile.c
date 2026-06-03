@@ -5,11 +5,10 @@
 #define SIZE_LNBUF 255 //line buffer max size
 #define SIZE_TXBUF 5000 //text file buffer for each split file
 
-int main() {
+int main(int argc, char *argv[]) {
   int bufsize = 0;
   int runs = 0;
 
-  char filename[SIZE_FN] = "";
   char lnbuf[SIZE_LNBUF] = "";
 
   char *txbuf = malloc(SIZE_TXBUF); //allocate split file buffer 
@@ -18,8 +17,24 @@ int main() {
     return EXIT_FAILURE;
   }
 
-  printf("Enter file name to be split: ");
-  scanf("%s", filename);
+  if (argc < 2)
+  {
+    fprintf(
+      stderr,
+      "Error: Missing argument. Usage %s <filename>\n", argv[0]
+    );
+    return EXIT_FAILURE;
+  }
+  else if (argc > 2) {
+    fprintf(
+      stderr,
+      "Error: Too many arguments. Usage %s <filename>\n", argv[0]
+    );
+    return EXIT_FAILURE;
+  }
+
+  /* gets file name from argument 1 */
+  char *filename = argv[1];
 
   FILE *readpoint = fopen(filename, "r"); //open fstream, read input file
   if (readpoint == NULL) {
