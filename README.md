@@ -28,7 +28,7 @@ sudo make uninstall
 
 ### Run the binary
 ```
-splitfile
+splitfile <filename>
 ```
 > Note: you may need to restart your terminal after the install to update your configs or use the `source` command.
 
